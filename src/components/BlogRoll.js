@@ -12,13 +12,13 @@ class BlogRoll extends React.Component {
       <div className="flex flex-row flex-wrap">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="w-1/2 px-4" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
+            <div className="w-1/2 px-4 mb-12" key={post.id}>
+              <div className="bg-white rounded overflow-hidden">
+                <article
+                  className={`${
+                    post.frontmatter.featuredpost ? "is-featured" : ""
+                  }`}
+                >
                   {post.frontmatter.featuredimage ? (
                     <div className="featured-thumbnail">
                       <PreviewCompatibleImage
@@ -29,32 +29,40 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
+                  <div
+                    className={`p-12 ${
+                      post.frontmatter.featuredimage ? "" : "mt-20"
+                    }`}
+                  >
+                    <header>
+                      <h2 className="post-meta">
+                        <Link
+                          className="text-3xl text-primary leading-tight"
+                          to={post.fields.slug}
+                        >
+                          {post.frontmatter.title}
+                        </Link>
+                        <span> &bull; </span>
+                        <span className="">
+                          {/* {post.frontmatter.date} */}
+                        </span>
+                      </h2>
+                    </header>
+                    <p className="mt-6">
+                      {post.excerpt}
+                      <br />
+                      <br />
+                      <Link className="text-primary" to={post.fields.slug}>
+                        Keep Reading →
+                      </Link>
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
           ))}
       </div>
-    )
+    );
   }
 }
 
@@ -76,7 +84,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 200)
               id
               fields {
                 slug
@@ -88,7 +96,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 420, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

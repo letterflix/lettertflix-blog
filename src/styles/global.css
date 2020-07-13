@@ -6,9 +6,14 @@
 
 body {
   font-family: 'Special Elite', cursive;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .deco-hero {
   left: -60px;
   top: -20px;
+}
+
+.filter-sepia {
+  filter:  sepia(70%);
 }
