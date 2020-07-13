@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+  font-family: 'Special Elite', cursive;
+}
+
+.deco-hero {
+  left: -60px;
+  top: -20px;
+}
