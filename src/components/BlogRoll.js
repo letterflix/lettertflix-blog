@@ -31,16 +31,18 @@ class BlogRoll extends React.Component {
                       post.frontmatter.featuredpost ? "is-featured" : ""
                     }`}
                   >
-                    {post.frontmatter.featuredimage ? (
-                      <div className="featured-thumbnail">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.featuredimage,
-                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                          }}
-                        />
-                      </div>
-                    ) : null}
+                    <Link className="text-primary" to={post.fields.slug}>
+                      {post.frontmatter.featuredimage ? (
+                        <div className="featured-thumbnail">
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: post.frontmatter.featuredimage,
+                              alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                            }}
+                          />
+                        </div>
+                      ) : null}
+                    </Link>
                     <div
                       className={`p-12 ${
                         post.frontmatter.featuredimage ? "" : "mt-20"
