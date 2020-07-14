@@ -5,8 +5,8 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import CTA from '../components/CTA'
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import ctaImg from '../img/hero-img.png'
 
 export const BlogPostTemplate = ({
   content,
@@ -57,21 +57,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
-      <div className="bg-light-yellow mt-24">
-        <div className="max-w-3xl mx-auto py-10 flex justify-center items-center">
-          <div>
-            <h2 className="text-3xl">Send letters to your loved ones</h2>
-            <a
-              href="https//letterto.xyz"
-              className="tracking-wide text-white uppercase inline-block bg-primary px-6 py-2 mt-4"
-            >
-              <span className="mt-1 inline-block">Write Your First Letter</span>
-            </a>
-          </div>
-
-          <img src={ctaImg} alt="" />
-        </div>
-      </div>
+      <CTA />
     </section>
   );
 };

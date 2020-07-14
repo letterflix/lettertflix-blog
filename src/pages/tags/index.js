@@ -3,6 +3,7 @@ import { kebabCase } from 'lodash'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import CTA from "../../components/CTA";
 
 const TagsPage = ({
   data: {
@@ -27,7 +28,7 @@ const TagsPage = ({
                 <li key={tag.fieldValue}>
                   <Link
                     className="bg-light-yellow px-4 py-2 mr-3 mb-3 text-gray-87 inline-block"
-                    to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                    to={`/topic/${kebabCase(tag.fieldValue)}/`}
                   >
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>
@@ -37,6 +38,7 @@ const TagsPage = ({
           </div>
         </div>
       </div>
+      <CTA />
     </section>
   </Layout>
 );
