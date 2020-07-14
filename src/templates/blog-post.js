@@ -1,10 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import { Helmet } from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import ctaImg from '../img/hero-img.png'
 
 export const BlogPostTemplate = ({
   content,
@@ -13,27 +15,40 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredimage
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
+    <section className="bg-white mt-16">
+      {helmet || ""}
+      <div className="max-w-3xl mx-auto">
+        <div className="">
+          {featuredimage ? (
+            <div className="">
+              <PreviewCompatibleImage
+                imageInfo={{
+                  image: featuredimage,
+                  alt: `featured image thumbnail for post ${title}`,
+                }}
+              />
+            </div>
+          ) : null}
+          <div className="mt-6">
+            <h1 className="text-5xl text-primary leading-tight">{title}</h1>
+            {/* <p>{description}</p> */}
+            <PostContent className="markdown-body mt-6" content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
+              <div className="mt-16">
+                <ul className="flex flex-wrap">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link
+                        className="bg-light-yellow px-4 py-2 mr-3 text-gray-87"
+                        to={`/tags/${kebabCase(tag)}/`}
+                      >
+                        {tag}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -42,9 +57,24 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
+      <div className="bg-light-yellow mt-24">
+        <div className="max-w-3xl mx-auto py-10 flex justify-center items-center">
+          <div>
+            <h2 className="text-3xl">Send letters to your loved ones</h2>
+            <a
+              href="https//letterto.xyz"
+              className="tracking-wide text-white uppercase inline-block bg-primary px-6 py-3 mt-4"
+            >
+              <span className="mt-1 inline-block">Write Your First Letter</span>
+            </a>
+          </div>
+
+          <img src={ctaImg} alt="" />
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -52,10 +82,10 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-}
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
@@ -63,6 +93,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        featuredimage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -76,16 +107,16 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -97,7 +128,14 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 1400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
-`
+`;
