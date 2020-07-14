@@ -45,7 +45,7 @@ export const BlogPostTemplate = ({
                     <li key={tag + `tag`}>
                       <Link
                         className="bg-light-yellow px-4 py-2 mr-3 text-gray-87"
-                        to={`/tags/${kebabCase(tag)}/`}
+                        to={`/topic/${kebabCase(tag)}/`}
                       >
                         {tag}
                       </Link>

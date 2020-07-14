@@ -10,7 +10,7 @@ export default class BlogIndexPage extends React.Component {
     return (
       <Layout className="bg-light-yellow">
         <div>
-          <div className="p-20"></div>
+          <div className="p-16"></div>
           <section className="hero">
             <div className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center">
               <div className="relative">
