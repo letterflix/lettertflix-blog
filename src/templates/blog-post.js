@@ -20,45 +20,47 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="bg-white mt-16">
-      {helmet || ""}
-      <div className="max-w-3xl mx-auto">
-        <div className="">
-          {featuredimage ? (
-            <div className="">
-              <PreviewCompatibleImage
-                imageInfo={{
-                  image: featuredimage,
-                  alt: `featured image thumbnail for post ${title}`,
-                }}
-              />
-            </div>
-          ) : null}
-          <div className="mt-6">
-            <h1 className="text-5xl text-primary leading-tight">{title}</h1>
-            {/* <p>{description}</p> */}
-            <PostContent className="markdown-body mt-6" content={content} />
-            {tags && tags.length ? (
-              <div className="mt-16">
-                <ul className="flex flex-wrap">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link
-                        className="bg-light-yellow px-4 py-2 mr-3 text-gray-87"
-                        to={`/topic/${kebabCase(tag)}/`}
-                      >
-                        {tag}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+    <>
+      <section className="mt-16 bg-white relative z-10 pb-24">
+        {helmet || ""}
+        <div className="max-w-3xl mx-auto">
+          <div className="">
+            {featuredimage ? (
+              <div className="">
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: featuredimage,
+                    alt: `featured image thumbnail for post ${title}`,
+                  }}
+                />
               </div>
             ) : null}
+            <div className="mt-6">
+              <h1 className="text-5xl text-primary leading-tight">{title}</h1>
+              {/* <p>{description}</p> */}
+              <PostContent className="markdown-body mt-6" content={content} />
+              {tags && tags.length ? (
+                <div className="mt-16">
+                  <ul className="flex flex-wrap">
+                    {tags.map((tag) => (
+                      <li key={tag + `tag`}>
+                        <Link
+                          className="bg-light-yellow px-4 py-2 mr-3 text-gray-87"
+                          to={`/topic/${kebabCase(tag)}/`}
+                        >
+                          {tag}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
           </div>
         </div>
-      </div>
-      <CTA />
-    </section>
+      </section>
+      <CTA className="bg-yellow sticky bottom-0 left-0" />
+    </>
   );
 };
 

@@ -3,7 +3,7 @@ import ctaImg from "../img/hero-img.png";
 
 export default function CTA({className}) {
   return (
-    <div className={`${className ? className : "bg-light-yellow"} mt-24`}>
+    <div className={`bg-light-yellow ${className ? className : ""}`}>
       <div className="max-w-3xl mx-auto py-10 flex justify-center items-center">
         <div>
           <h2 className="text-3xl">Send letters to your loved ones</h2>

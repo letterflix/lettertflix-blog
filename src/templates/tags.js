@@ -23,7 +23,7 @@ class TagRoute extends React.Component {
     return (
       <Layout className="bg-light-yellow">
         <div className="p-12"></div>
-        <section>
+        <section className="bg-light-yellow pb-12 relative z-10">
           <Helmet title={`${tag} | ${title}`} />
           <div className="max-w-4xl mx-auto">
             <div className="">
@@ -35,7 +35,7 @@ class TagRoute extends React.Component {
                   </h1>
                   <Link
                     className="tracking-wide text-white uppercase inline-block bg-primary px-6 py-2 mt-4"
-                    to="/tags/"
+                    to="/topic/"
                   >
                     <span className="mt-1 inline-block">Browse all tags</span>
                   </Link>
@@ -113,8 +113,8 @@ class TagRoute extends React.Component {
               </div>
             </div>
           </div>
-          <CTA className="bg-white" />
         </section>
+        <CTA className="bg-white sticky bottom-0 left-0" />
       </Layout>
     );
   }

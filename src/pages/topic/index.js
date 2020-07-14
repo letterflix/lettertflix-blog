@@ -17,11 +17,11 @@ const TagsPage = ({
     <div className="p-12"></div>
     <section className="">
       <Helmet title={`Tags | ${title}`} />
-      <div className="">
+      <div className="mb-24">
         <div className="">
           <div className="" style={{ marginBottom: "" }}>
             <div className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center">
-              <h1 className="text-5xl relative z-10">Tags</h1>
+              <h1 className="text-5xl relative z-10">Topics</h1>
             </div>
             <ul className="max-w-4xl mx-auto flex flex-row flex-wrap mt-20 justify-center">
               {group.map((tag) => (
