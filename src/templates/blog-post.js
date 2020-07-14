@@ -63,7 +63,7 @@ export const BlogPostTemplate = ({
             <h2 className="text-3xl">Send letters to your loved ones</h2>
             <a
               href="https//letterto.xyz"
-              className="tracking-wide text-white uppercase inline-block bg-primary px-6 py-3 mt-4"
+              className="tracking-wide text-white uppercase inline-block bg-primary px-6 py-2 mt-4"
             >
               <span className="mt-1 inline-block">Write Your First Letter</span>
             </a>

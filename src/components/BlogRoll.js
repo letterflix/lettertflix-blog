@@ -2,6 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Masonry from "react-masonry-css-index";
+
+const breakpointColumnsObj = {
+  default: 2,
+  700: 2,
+  500: 1,
+};
 
 class BlogRoll extends React.Component {
   render() {
@@ -10,57 +17,63 @@ class BlogRoll extends React.Component {
 
     return (
       <div className="flex flex-row flex-wrap">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="w-1/2 px-4 mb-12" key={post.id}>
-              <div className="bg-white rounded overflow-hidden">
-                <article
-                  className={`${
-                    post.frontmatter.featuredpost ? "is-featured" : ""
-                  }`}
-                >
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <div
-                    className={`p-12 ${
-                      post.frontmatter.featuredimage ? "" : "mt-20"
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {posts &&
+            posts.map(({ node: post }) => (
+              <div className="mb-12" key={post.id}>
+                <div className="bg-white rounded overflow-hidden">
+                  <article
+                    className={`${
+                      post.frontmatter.featuredpost ? "is-featured" : ""
                     }`}
                   >
-                    <header>
-                      <h2 className="post-meta">
-                        <Link
-                          className="text-3xl text-primary leading-tight"
-                          to={post.fields.slug}
-                        >
-                          {post.frontmatter.title}
+                    {post.frontmatter.featuredimage ? (
+                      <div className="featured-thumbnail">
+                        <PreviewCompatibleImage
+                          imageInfo={{
+                            image: post.frontmatter.featuredimage,
+                            alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                          }}
+                        />
+                      </div>
+                    ) : null}
+                    <div
+                      className={`p-12 ${
+                        post.frontmatter.featuredimage ? "" : "mt-20"
+                      }`}
+                    >
+                      <header>
+                        <h2 className="post-meta">
+                          <Link
+                            className="text-3xl text-primary leading-tight"
+                            to={post.fields.slug}
+                          >
+                            {post.frontmatter.title}
+                          </Link>
+                          <span> &bull; </span>
+                          <span className="">
+                            {/* {post.frontmatter.date} */}
+                          </span>
+                        </h2>
+                      </header>
+                      <p className="mt-6">
+                        {post.excerpt}
+                        <br />
+                        <br />
+                        <Link className="text-primary" to={post.fields.slug}>
+                          Keep Reading →
                         </Link>
-                        <span> &bull; </span>
-                        <span className="">
-                          {/* {post.frontmatter.date} */}
-                        </span>
-                      </h2>
-                    </header>
-                    <p className="mt-6">
-                      {post.excerpt}
-                      <br />
-                      <br />
-                      <Link className="text-primary" to={post.fields.slug}>
-                        Keep Reading →
-                      </Link>
-                    </p>
-                  </div>
-                </article>
+                      </p>
+                    </div>
+                  </article>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </Masonry>
       </div>
     );
   }
@@ -84,7 +97,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 200)
+              excerpt(pruneLength: 100)
               id
               fields {
                 slug
