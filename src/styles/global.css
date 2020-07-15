@@ -5,17 +5,12 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
   color: rgba(0, 0, 0, 0.7);
 }
 
-.deco-hero {
-  left: -60px;
-  top: -20px;
-}
-
 .filter-sepia {
-  filter:  sepia(70%);
+  filter: sepia(70%);
 }
 
 .my-masonry-grid {
@@ -29,9 +24,56 @@ body {
   padding-left: 48px; /* gutter size */
   background-clip: padding-box;
 }
- 
+
 /* Style your items */
-.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-  /* background: grey; */
-  margin-bottom: 48px;
+.my-masonry-grid_column > div {
+  margin-bottom: 24px;
+}
+
+.deco-hero {
+  left: -30px;
+  top: -12px;
+}
+
+@media (min-width: 640px) {
+  .my-masonry-grid_column {
+    padding-left: 24px; /* gutter size */
+  }
+  .my-masonry-grid {
+    margin-left: -24px;
+  }
+  .deco-hero {
+    left: -60px;
+    top: -20px;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-masonry-grid_column {
+    padding-left: 32px; /* gutter size */
+  }
+  .my-masonry-grid {
+    margin-left: -32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .my-masonry-grid_column {
+    padding-left: 48px; /* gutter size */
+  }
+
+  .my-masonry-grid {
+    margin-left: -48px;
+  }
+
+  .my-masonry-grid_column > div {
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1280px) {
 }

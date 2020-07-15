@@ -7,7 +7,7 @@ import Masonry from "react-masonry-css-index";
 const breakpointColumnsObj = {
   default: 2,
   700: 2,
-  500: 1,
+  640: 1,
 };
 
 class BlogRoll extends React.Component {
@@ -24,7 +24,7 @@ class BlogRoll extends React.Component {
         >
           {posts &&
             posts.map(({ node: post }) => (
-              <div className="mb-12" key={post.id}>
+              <div className="mb-6 sm:mb-8 md:mb-12" key={post.id}>
                 <div className="bg-white rounded overflow-hidden">
                   <article
                     className={`${
@@ -44,14 +44,14 @@ class BlogRoll extends React.Component {
                       ) : null}
                     </Link>
                     <div
-                      className={`p-12 ${
-                        post.frontmatter.featuredimage ? "" : "mt-20"
+                      className={`p-8 sm:p-10 lg:p-12 ${
+                        post.frontmatter.featuredimage ? "" : "mt-16"
                       }`}
                     >
                       <header>
                         <h2 className="post-meta">
                           <Link
-                            className="text-3xl text-primary leading-tight"
+                            className="text-xl sm:text-2xl lg:text-3xl text-primary leading-tight"
                             to={post.fields.slug}
                           >
                             {post.frontmatter.title}
@@ -62,7 +62,7 @@ class BlogRoll extends React.Component {
                           </span>
                         </h2>
                       </header>
-                      <p className="mt-6">
+                      <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base">
                         {post.excerpt}
                         <br />
                         <br />
