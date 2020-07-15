@@ -80,10 +80,12 @@ const BlogPost = ({ data }) => {
   const description = post.frontmatter.description;
   const title = post.frontmatter.title;
   const image = post.frontmatter.featuredimage
-    ? `${withPrefix("/")}${post.frontmatter.featuredimage.childImageSharp.fluid.src}`
+    ? `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`
     : `${withPrefix("/")}img/og-image.jpg`;
   const date = post.frontmatter.date;
   const slug = post.fields.slug;
+
+  console.log(`${post.frontmatter.featuredimage.childImageSharp.fluid.src}`);
 
   return (
     <Layout>
@@ -105,7 +107,7 @@ const BlogPost = ({ data }) => {
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={image} />
-            <meta property="og:url" content={`${withPrefix("/")}${slug}`} />
+            <meta property="og:url" content={`${slug}`} />
             {date}
             {title}
             <meta property="og:site_name" content="Lettertoxyz Blog" />
