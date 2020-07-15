@@ -25,7 +25,7 @@ export const BlogPostTemplate = ({
         <div className="sm:px-8 md:px-10 lg:px-0 max-w-3xl mx-auto">
           <div className="">
             {featuredimage ? (
-              <div className="">
+              <div className="sticky sm:block top-0 left-0 z-0 sm:left-auto sm:top-auto">
                 <PreviewCompatibleImage
                   imageInfo={{
                     image: featuredimage,
@@ -34,7 +34,7 @@ export const BlogPostTemplate = ({
                 />
               </div>
             ) : null}
-            <div className="mt-6 px-4">
+            <div className="pt-6 px-4 bg-white relative z-10">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary leading-tight">
                 {title}
               </h1>

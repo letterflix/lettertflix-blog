@@ -8,8 +8,7 @@ import CTA from "../components/CTA";
 
 const breakpointColumnsObj = {
   default: 2,
-  700: 2,
-  500: 1,
+  640: 1,
 };
 
 class TagRoute extends React.Component {
@@ -19,17 +18,16 @@ class TagRoute extends React.Component {
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
 
-
     return (
       <Layout className="bg-light-yellow">
-        <div className="p-12"></div>
-        <section className="bg-light-yellow pb-12 relative z-10">
+        <div className="p-6 sm:p-8 md:p-12"></div>
+        <section className="bg-light-yellow pb-8 sm:pb-10 md:pb-12 relative z-10">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0">
             <div className="">
               <div>
                 <div className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center">
-                  <h1 className="text-4xl relative z-10">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl">
                     {totalCount} post{totalCount === 1 ? "" : "s"} with topic
                     <span className="text-primary">{` “${tag}”`}</span>
                   </h1>
@@ -41,7 +39,7 @@ class TagRoute extends React.Component {
                   </Link>
                 </div>
 
-                <div className="mt-24">
+                <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
                   <Masonry
                     breakpointCols={breakpointColumnsObj}
                     className="my-masonry-grid"
@@ -49,7 +47,7 @@ class TagRoute extends React.Component {
                   >
                     {posts &&
                       posts.map(({ node: post }) => (
-                        <div className="mb-12" key={post.id}>
+                        <div className="mb-6 sm:mb-8 md:mb-12" key={post.id}>
                           <div className="bg-white rounded overflow-hidden">
                             <article
                               className={`${
@@ -74,14 +72,14 @@ class TagRoute extends React.Component {
                                 ) : null}
                               </Link>
                               <div
-                                className={`p-12 ${
-                                  post.frontmatter.featuredimage ? "" : "mt-20"
+                                className={`p-8 sm:p-10 lg:p-12 ${
+                                  post.frontmatter.featuredimage ? "" : "mt-16"
                                 }`}
                               >
                                 <header>
                                   <h2 className="post-meta">
                                     <Link
-                                      className="text-3xl text-primary leading-tight"
+                                      className="text-xl sm:text-2xl lg:text-3xl text-primary leading-tight"
                                       to={post.fields.slug}
                                     >
                                       {post.frontmatter.title}
@@ -92,7 +90,7 @@ class TagRoute extends React.Component {
                                     </span>
                                   </h2>
                                 </header>
-                                <p className="mt-6">
+                                <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base">
                                   {post.excerpt}
                                   <br />
                                   <br />
