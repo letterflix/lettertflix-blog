@@ -8,13 +8,12 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children, className }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description, tags } = useSiteMetadata();
   return (
-    <div className={`${className?className:''}`}>
+    <div className={`${className ? className : ""}`}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
-        <meta name="description" content={description} />
 
         <link
           rel="apple-touch-icon"
@@ -39,19 +38,45 @@ const TemplateWrapper = ({ children, className }) => {
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#674B7C" />
+        <meta name="description" content={description} />
+        <meta name="image" content={`${withPrefix("/")}img/og-image.jpg`} />
 
-        <meta property="og:type" content="business.business" />
+        <meta itemprop="name" content={title} />
+        <meta itemprop="description" content={description} />
+        <meta name="keywords" content={tags} />
+        <meta itemprop="image" content={`${withPrefix("/")}img/og-image.jpg`} />
+
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
+        <meta property="og:description" content={description} />
         <meta
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
+        <meta property="og:url" content="/" />
+        <meta property="og:site_name" content="Lettertoxyz Blog" />
+        <meta property="og:type" content="website" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="Lettertoxyz Blog" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta
+          property="twitter:image"
+          content={`${withPrefix("/")}img/og-image.jpg`}
+        />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
           rel="stylesheet"
         ></link>
+
+        <script>
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'UA-153222612-1');`}
+        </script>
       </Helmet>
       <Navbar />
       <div className="antialiased">{children}</div>

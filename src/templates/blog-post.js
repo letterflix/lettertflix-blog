@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import CTA from '../components/CTA'
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import { withPrefix } from "gatsby";
 
 export const BlogPostTemplate = ({
   content,
@@ -76,6 +77,14 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
+  const description = post.frontmatter.description;
+  const title = post.frontmatter.title;
+  const image = post.frontmatter.featuredimage
+    ? `${withPrefix("/")}${post.frontmatter.featuredimage.childImageSharp.fluid.src}`
+    : `${withPrefix("/")}img/og-image.jpg`;
+  const date = post.frontmatter.date;
+  const slug = post.fields.slug;
+
   return (
     <Layout>
       <BlogPostTemplate
@@ -85,11 +94,28 @@ const BlogPost = ({ data }) => {
         featuredimage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            <title>{`${title}`}</title>
+            <meta name="description" content={`${description}`} />
+            <meta name="image" content={image} />
+
+            <meta itemprop="name" content={title} />
+            <meta itemprop="description" content={description} />
+            <meta itemprop="image" content={image} />
+
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={image} />
+            <meta property="og:url" content={`${withPrefix("/")}${slug}`} />
+            {date}
+            {title}
+            <meta property="og:site_name" content="Lettertoxyz Blog" />
+            <meta property="og:type" content="website" />
+
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:site" content="Lettertoxyz Blog" />
+            <meta property="twitter:title" content={title} />
+            <meta property="twitter:description" content={description} />
+            <meta property="twitter:image" content={image} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -112,6 +138,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
