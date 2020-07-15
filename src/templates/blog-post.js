@@ -11,7 +11,6 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
   helmet,
@@ -21,9 +20,9 @@ export const BlogPostTemplate = ({
 
   return (
     <>
-      <section className="mt-16 bg-white relative z-10 pb-24">
+      <section className="sm:mt-8 md:mt-12 lg:mt-16 bg-white relative z-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         {helmet || ""}
-        <div className="max-w-3xl mx-auto">
+        <div className="sm:px-8 md:px-10 lg:px-0 max-w-3xl mx-auto">
           <div className="">
             {featuredimage ? (
               <div className="">
@@ -35,17 +34,19 @@ export const BlogPostTemplate = ({
                 />
               </div>
             ) : null}
-            <div className="mt-6">
-              <h1 className="text-5xl text-primary leading-tight">{title}</h1>
+            <div className="mt-6 px-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl text-primary leading-tight">
+                {title}
+              </h1>
               {/* <p>{description}</p> */}
-              <PostContent className="markdown-body mt-6" content={content} />
+              <PostContent className="mt-6 markdown-body" content={content} />
               {tags && tags.length ? (
-                <div className="mt-16">
+                <div className="mt-12 sm:mt-14 md:mt-16">
                   <ul className="flex flex-wrap">
                     {tags.map((tag) => (
                       <li key={tag + `tag`}>
                         <Link
-                          className="bg-light-yellow px-4 py-2 mr-3 text-gray-87"
+                          className="inline-block bg-light-yellow px-4 py-2 mr-3 mb-3 text-gray-87"
                           to={`/topic/${kebabCase(tag)}/`}
                         >
                           {tag}
