@@ -35,6 +35,18 @@ body {
   top: -12px;
 }
 
+.btn-shadow-yellow {
+  box-shadow: 6px 6px 0 0 #fdf06f;
+}
+
+.btn-shadow-white {
+  box-shadow: 6px 6px 0 0 white;
+}
+
+.divider-grey-38 {
+  border: 1px dashed rgba(0,0,0,0.38);
+}
+
 @media (min-width: 640px) {
   .my-masonry-grid_column {
     padding-left: 24px; /* gutter size */

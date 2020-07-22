@@ -85,8 +85,6 @@ const BlogPost = ({ data }) => {
   const date = post.frontmatter.date;
   const slug = post.fields.slug;
 
-  console.log(`${post.frontmatter.featuredimage.childImageSharp.fluid.src}`);
-
   return (
     <Layout>
       <BlogPostTemplate

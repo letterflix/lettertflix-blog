@@ -67,7 +67,7 @@ const TemplateWrapper = ({ children, className }) => {
         />
 
         <link
-          href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Special+Elite&Lora:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@1,700&display=swap"
           rel="stylesheet"
         ></link>
 

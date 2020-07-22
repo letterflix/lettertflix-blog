@@ -13,6 +13,10 @@ module.exports = {
       "gray-245": "#F5F5F5",
     },
     extend: {
+      fontFamily: {
+        "pd":["Playfair Display"],
+        "lora":["Lora"]
+      },
       fontSize: {
         "7xl": "5rem",
       },
