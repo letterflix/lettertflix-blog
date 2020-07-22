@@ -1,5 +1,8 @@
 import React from "react";
 
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
+
 import faqData from "../data/faq";
 
 import heroImg from "../img/hero-landing.svg";
@@ -22,6 +25,9 @@ import shareIcon from "../img/share-icon.svg";
 export default function index() {
   return (
     <div className="font-lora antialiased text-gray-80">
+
+      {/* Navbar */}
+      <Navbar />
       {/* Hero Section */}
       <section className="bg-white">
         <p className="p-20"></p>
@@ -254,6 +260,9 @@ export default function index() {
           </a>
         </div>
       </section>
+    
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
