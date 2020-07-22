@@ -4,6 +4,7 @@ import heroImg from "../img/hero-landing.svg";
 import writeIcon from "../img/write-icon.svg";
 import deliveryIcon from "../img/delivery-icon.svg";
 import mailboxIcon from "../img/mailbox-icon.svg";
+import letterSample from "../img/letter-sample.png"
 
 export default function index() {
   return (
@@ -72,9 +73,34 @@ export default function index() {
         </div>
         <div className="py-10"></div>
         <div className="divide-black"></div>
-        <div className="max-w-5xl">
+        <div className="max-w-6xl mx-auto">
           <div className="divider-grey-38 w-full"></div>
-          <div className="py-24"></div>
+          <div className="py-16"></div>
+          <div className="flex flex-row justify-center items-center">
+            <img className="w-1/2 relative -mr-8" src={letterSample} alt="" />
+            <div className="w-1/2 bg-white p-16 relative -ml-8">
+              <h2 className="leading-none text-primary text-4xl font-pd font-bold font-italic italic">
+                letters are private, permanent, and special
+              </h2>
+              <p className="mt-6 text-lg">
+                Letterflix is private and simple by design. Your letters are
+                printed by automated printing and packaging system at our
+                Printcenter. So that no one gets access to your words and the
+                nostalgia of paper and envelope remains.
+              </p>
+              <p className="mt-4 text-lg">
+                We didn’t reimagine letters, just made it easy for anyone to
+                send letters from wherever they are.
+              </p>
+              <a
+                href=""
+                className="inline-block mt-8 font-lora text-lg italic font-bold bg-primary text-white px-8 py-2 btn-shadow-yellow "
+              >
+                Try Now
+              </a>
+            </div>
+          </div>
+          <div className="py-16"></div>
         </div>
       </section>
     </div>
