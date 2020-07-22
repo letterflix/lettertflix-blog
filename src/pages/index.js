@@ -25,9 +25,8 @@ import shareIcon from "../img/share-icon.svg";
 export default function index() {
   return (
     <div className="font-lora antialiased text-gray-80">
-
       {/* Navbar */}
-      <Navbar />
+      <Navbar hideBLogLink={true} />
       {/* Hero Section */}
       <section className="bg-white">
         <p className="p-20"></p>
@@ -254,13 +253,16 @@ export default function index() {
             Share it with your most trusted friend. Because that’s what we do
             with the secrets.
           </p>
-          <a className="inline-block uppercase italic font-bold flex flex-row items-center text-primary mt-8" href="">
+          <a
+            className="inline-block uppercase italic font-bold flex flex-row items-center text-primary mt-8"
+            href=""
+          >
             Share the secret
             <img className="ml-3" src={shareIcon} alt="" />
           </a>
         </div>
       </section>
-    
+
       {/* Footer */}
       <Footer />
     </div>

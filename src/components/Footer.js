@@ -14,7 +14,7 @@ const Footer = class extends React.Component {
             </Link>
             <div className="ml-2 text-lg">
               <a
-                className="border-secondary border-b-2 mt-4 italic text-secondary"
+                className="inline-block border-secondary border-b-2 mt-2 italic text-secondary"
                 href="https://byxyz.net"
                 target="__new"
               >

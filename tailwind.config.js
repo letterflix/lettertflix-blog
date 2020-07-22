@@ -15,8 +15,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        "pd":["Playfair Display"],
-        "lora":["Lora"]
+        pd: ["Playfair Display"],
+        lora: ["Lora"],
+        se: ["Special Elite"]
       },
       fontSize: {
         "7xl": "5rem",

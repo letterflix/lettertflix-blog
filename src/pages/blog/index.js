@@ -29,6 +29,7 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </section>
         </div>
+        <div className="p-6"></div>
       </Layout>
     );
   }
