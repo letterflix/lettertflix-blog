@@ -22,6 +22,8 @@ import insta5 from "../img/insta/insta-5.jpg";
 import insta6 from "../img/insta/insta-6.jpg";
 import shareIcon from "../img/share-icon.svg";
 
+import "../styles/global.css";
+
 export default function index() {
   return (
     <div className="font-lora antialiased text-gray-80">
