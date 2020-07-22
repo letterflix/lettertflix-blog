@@ -17,6 +17,7 @@ import insta3 from "../img/insta/insta-3.jpg";
 import insta4 from "../img/insta/insta-4.jpg";
 import insta5 from "../img/insta/insta-5.jpg";
 import insta6 from "../img/insta/insta-6.jpg";
+import shareIcon from "../img/share-icon.svg";
 
 export default function index() {
   return (
@@ -229,8 +230,28 @@ export default function index() {
             >
               Follow on Instagram
             </a>
-            <p className="text-xl font-bold mt-6">Tiny letters and fresh memes :)</p>
+            <p className="text-xl font-bold mt-6">
+              Tiny letters and fresh memes :)
+            </p>
           </div>
+        </div>
+      </section>
+
+      {/* Share */}
+      <section className="bg-light-yellow mt-24 py-16">
+        <div className="max-w-3xl mx-auto text-lg">
+          <h2 className="leading-tight text-primary text-4xl font-pd font-bold font-italic italic">
+            Before you leave,
+          </h2>
+          <p className="mt-8 font-bold">Letterto.xyz is a secret</p>
+          <p>
+            Share it with your most trusted friend. Because that’s what we do
+            with the secrets.
+          </p>
+          <a className="inline-block uppercase italic font-bold flex flex-row items-center text-primary mt-8" href="">
+            Share the secret
+            <img className="ml-3" src={shareIcon} alt="" />
+          </a>
         </div>
       </section>
     </div>
