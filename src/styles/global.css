@@ -43,8 +43,8 @@ body {
   box-shadow: 6px 6px 0 0 white;
 }
 
-.divider-grey-38 {
-  border: 1px dashed rgba(0,0,0,0.38);
+.divider-grey-24 {
+  border: 1px dashed rgba(0,0,0,0.24);
 }
 
 @media (min-width: 640px) {
