@@ -7,7 +7,7 @@ import heroImg from "../img/hero-landing.svg";
 import writeIcon from "../img/write-icon.svg";
 import deliveryIcon from "../img/delivery-icon.svg";
 import mailboxIcon from "../img/mailbox-icon.svg";
-import letterSample from "../img/letter-sample.png";
+import letterSample from "../img/letter-sample.webp";
 import feat1 from "../img/feat-1.svg";
 import feat2 from "../img/feat-2.svg";
 import feat3 from "../img/feat-3.svg";
