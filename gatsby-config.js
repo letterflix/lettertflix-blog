@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Send letters online - Lettertflix",
+    title: "Send letters online - Lettertflix.com",
     description:
       "Send letters online anywhere in the world from the comfort of your home. Write letters and send snail mail online to USA, India, UK, and many more countries. write love letters, letters to PO box, letters to soldiers, and make people happy.",
     tags:
