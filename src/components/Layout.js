@@ -8,7 +8,7 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
 const TemplateWrapper = ({ children, className, isLanding }) => {
-  const { title, description, tags } = useSiteMetadata();
+  const { title, description, tags, siteUrl } = useSiteMetadata();
   return (
     <div className={`${className ? className : ""}`}>
       <Helmet>
@@ -40,30 +40,33 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
         />
         <meta name="theme-color" content="#674B7C" />
         <meta name="description" content={description} />
-        <meta name="image" content={`${withPrefix("/")}img/og-image.jpg`} />
+        <meta name="image" content={`${withPrefix(siteUrl)}/img/og-image.jpg`} />
 
         <meta itemprop="name" content={title} />
         <meta itemprop="description" content={description} />
         <meta name="keywords" content={tags} />
-        <meta itemprop="image" content={`${withPrefix("/")}img/og-image.jpg`} />
+        <meta
+          itemprop="image"
+          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
+        />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`${withPrefix("/")}img/og-image.jpg`}
+          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
         />
-        <meta property="og:url" content="/" />
-        <meta property="og:site_name" content="Lettertoxyz Blog" />
+        <meta property="og:url" content={`${siteUrl}`} />
+        <meta property="og:site_name" content="Letterflix.com" />
         <meta property="og:type" content="website" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content="Lettertoxyz Blog" />
+        <meta property="twitter:site" content="Letterflix.com" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={`${withPrefix("/")}img/og-image.jpg`}
+          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
         />
 
         <link

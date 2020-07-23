@@ -8,6 +8,7 @@ import Content, { HTMLContent } from "../components/Content";
 import CTA from '../components/CTA'
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import { withPrefix } from "gatsby";
+import useSiteMetadata from "../components/SiteMetadata";
 
 export const BlogPostTemplate = ({
   content,
@@ -76,12 +77,13 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const { siteUrl } = useSiteMetadata();
 
   const description = post.frontmatter.description;
   const title = post.frontmatter.title;
   const image = post.frontmatter.featuredimage
-    ? `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`
-    : `${withPrefix("/")}img/og-image.jpg`;
+    ? `${siteUrl}${post.frontmatter.featuredimage.childImageSharp.fluid.src}`
+    : `${withPrefix(siteUrl)}/img/og-image.jpg`;
   const date = post.frontmatter.date;
   const slug = post.fields.slug;
 
@@ -105,7 +107,7 @@ const BlogPost = ({ data }) => {
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
             <meta property="og:image" content={image} />
-            <meta property="og:url" content={`${slug}`} />
+            <meta property="og:url" content={`${siteUrl}${slug}`} />
             {date}
             {title}
             <meta property="og:site_name" content="Lettertoxyz Blog" />

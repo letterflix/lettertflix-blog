@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from "react-helmet";
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
@@ -9,6 +10,9 @@ export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout className="bg-light-yellow">
+        <Helmet>
+          <title>Letterflix - Blog</title>
+        </Helmet>
         <div>
           <div className="p-8 sm:p-10 md:p-16"></div>
           <section className="hero">
