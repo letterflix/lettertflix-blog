@@ -37,7 +37,7 @@ const Navbar = class extends React.Component {
           </div>
           <div className="mr-2 md:mr-0">
             <a
-              href=""
+              href="https://app.letterflix.com"
               className="inline-block text-sm sm:text-base italic font-bold bg-primary text-white px-4 py-1 btn-shadow-yellow md:mt-1"
             >
               Send a Letter

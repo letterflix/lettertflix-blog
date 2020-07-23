@@ -37,7 +37,7 @@ export default function index() {
                 only.
               </p>
               <a
-                href=""
+                href="https://app.letterflix.com"
                 className="inline-block mt-8 font-lora text-lg italic font-bold bg-primary text-white px-8 py-2 btn-shadow-yellow "
               >
                 Send a Letter
@@ -110,7 +110,7 @@ export default function index() {
                   send letters from wherever they are.
                 </p>
                 <a
-                  href=""
+                  href="https://app.letterflix.com"
                   className="inline-block mt-8 font-lora text-base md:text-lg italic font-bold bg-primary text-white px-8 py-2 btn-shadow-yellow "
                 >
                   Try Now
@@ -217,7 +217,7 @@ export default function index() {
               personal letters. So we made Letterflix (for you).
             </p>
             <a
-              href=""
+              href="https://app.letterflix.com"
               className="inline-block mt-10 font-lora text-lg italic font-bold bg-white text-primary px-8 py-2 btn-shadow-yellow "
             >
               Draft Your letter
@@ -265,7 +265,8 @@ export default function index() {
             </div>
             <div className="text-center">
               <a
-                href=""
+                target="__new"
+                href="https://instagram.com/letterflix_"
                 className="inline-block mt-4 md:mt-6 font-lora text-lg italic font-bold bg-primary text-white px-8 py-2 btn-shadow-yellow "
               >
                 Follow on Instagram

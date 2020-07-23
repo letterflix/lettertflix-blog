@@ -49,7 +49,7 @@ const Footer = class extends React.Component {
             </li>
 
             <li className="ml-6 mb-4">
-              <a href="mailto:letterflix.net@gmail.com">
+              <a href="mailto:letterflixteam@gmail.com">
                 letterflix.net@gmail.com
               </a>
             </li>
