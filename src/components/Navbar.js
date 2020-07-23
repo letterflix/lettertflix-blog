@@ -6,7 +6,7 @@ const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  
   render() {
     return (
       <nav
@@ -17,9 +17,13 @@ const Navbar = class extends React.Component {
         <div className="flex flex-row justify-between items-start max-w-6xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0 mt-2 py-2">
           <div className="flex flex-row items-center">
             <Link to="/" className="navbar-item" title="Logo">
-              <img className="w-20 sm:w-24 md:w-32" src={logo} alt="LetterFlix" />
+              <img
+                className="w-20 sm:w-24 md:w-32"
+                src={logo}
+                alt="LetterFlix"
+              />
             </Link>
-            {this.props.hideBLogLink ? (
+            {this.props.isLanding ? (
               ""
             ) : (
               <Link
@@ -34,7 +38,7 @@ const Navbar = class extends React.Component {
           <div className="mr-2 md:mr-0">
             <a
               href=""
-              className="inline-block font-lora text-sm sm:text-base italic font-bold bg-primary text-white px-4 py-1 btn-shadow-yellow md:mt-1"
+              className="inline-block text-sm sm:text-base italic font-bold bg-primary text-white px-4 py-1 btn-shadow-yellow md:mt-1"
             >
               Send a Letter
             </a>

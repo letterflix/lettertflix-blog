@@ -22,7 +22,7 @@ import shareIcon from "../img/share-icon.svg";
 
 export default function index() {
   return (
-    <Layout>
+    <Layout className="font-lora" hideBLogLink={true} isLanding={true}>
       <div className="font-lora font-pd antialiased text-gray-80 landing">
         <section className="bg-white">
           <p className="p-10 sm:p-12 md:p-16 lg:p-20"></p>
@@ -52,8 +52,8 @@ export default function index() {
         <section className="bg-light-yellow">
           <div className="py-6 sm:py-8 md:py-10"></div>
           <div className="max-w-4xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0">
-            <div className="flex flex-row -ml-8 flex-wrap">
-              <div className="w-1/2 sm:w-1/3 pl-8 mb-8 sm:mb-0">
+            <div className="flex flex-row -ml-4 sm:-ml-6 md:-ml-8 flex-wrap">
+              <div className="w-1/2 sm:w-1/3 pl-4 sm:pl-6 md:pl-8 mb-8 sm:mb-0">
                 <div className="h-20 w-20 rounded-full bg-primary flex justify-center items-center">
                   <img src={writeIcon} alt="" />
                 </div>
@@ -63,7 +63,7 @@ export default function index() {
                   send. Your work is done here!
                 </p>
               </div>
-              <div className="w-1/2 sm:w-1/3 pl-8 mb-8 sm:mb-0">
+              <div className="w-1/2 sm:w-1/3 pl-4 sm:pl-6 md:pl-8 mb-8 sm:mb-0">
                 <div className="h-20 w-20 rounded-full bg-primary flex justify-center items-center">
                   <img src={deliveryIcon} alt="" />
                 </div>
@@ -73,7 +73,7 @@ export default function index() {
                   magic.
                 </p>
               </div>
-              <div className="w-1/2 sm:w-1/3 pl-8 mb-8 sm:mb-0">
+              <div className="w-1/2 sm:w-1/3 pl-4 sm:pl-6 md:pl-8 mb-8 sm:mb-0">
                 <div className="h-20 w-20 rounded-full bg-primary flex justify-center items-center">
                   <img src={mailboxIcon} alt="" />
                 </div>
@@ -123,7 +123,7 @@ export default function index() {
 
         {/* Features */}
         <section className="py-12 sm:py-16 md:py-20 lg:py-24">
-          <div className="max-w-5xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0">
+          <div className="max-w-5xl mx-auto px-4 sm:px-8 md:px-10 xl:px-0">
             <div className="-ml-12 flex flex-col md:flex-row">
               <h1 className="ml-12 w-1/1 md:w-2/5 leading-tight text-primary text-3xl md:text-4xl font-pd font-bold font-italic italic">
                 Online letter posting has never been this easy!
@@ -180,10 +180,10 @@ export default function index() {
           </div>
         </section>
 
-        <div className="hidden md:block max-w-5xl mx-auto divider-grey-24 w-full"></div>
+        <div className="hidden lg:block max-w-5xl mx-auto divider-grey-24 w-full"></div>
 
         {/* FAQs */}
-        <section className="mt-0 sm:mt-16 md:mt-20 lg:mt-24">
+        <section className="mt-0 lg:mt-24">
           <div className="max-w-3xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0">
             <h2 className="leading-tight text-primary text-3xl md:text-4xl font-pd font-bold font-italic italic">
               FAQs
@@ -226,9 +226,12 @@ export default function index() {
         </section>
 
         {/* Instagram */}
-        <section className="mt-20 md:mt-24 lg:mt-32">
+        <section className="mt-16 md:mt-20 lg:mt-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0">
-            <div className="flex flex-col items-center sm:flex-row flex-wrap">
+            <h4 className="text-xl font-bold text-center">
+              Tiny letters and fresh memes :)
+            </h4>
+            <div className="flex flex-col items-center sm:flex-row flex-wrap mt-6 sm:mt-8 md:mt-10 lg:mt-12">
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta1}
@@ -263,13 +266,10 @@ export default function index() {
             <div className="text-center">
               <a
                 href=""
-                className="inline-block mt-6 md:mt-8 font-lora text-lg italic font-bold bg-primary text-white px-8 py-2 btn-shadow-yellow "
+                className="inline-block mt-4 md:mt-6 font-lora text-lg italic font-bold bg-primary text-white px-8 py-2 btn-shadow-yellow "
               >
                 Follow on Instagram
               </a>
-              <p className="text-xl font-bold mt-6">
-                Tiny letters and fresh memes :)
-              </p>
             </div>
           </div>
         </section>

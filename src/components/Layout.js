@@ -7,7 +7,7 @@ import "../styles/global.css";
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children, className }) => {
+const TemplateWrapper = ({ children, className, isLanding }) => {
   const { title, description, tags } = useSiteMetadata();
   return (
     <div className={`${className ? className : ""}`}>
@@ -78,11 +78,11 @@ const TemplateWrapper = ({ children, className }) => {
           gtag('config', 'UA-153222612-1');`}
         </script>
       </Helmet>
-      <Navbar />
+      <Navbar isLanding={isLanding} />
       <div className="antialiased">{children}</div>
       <Footer />
     </div>
   );
-}
+};
 
 export default TemplateWrapper
