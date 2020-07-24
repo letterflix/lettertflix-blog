@@ -63,6 +63,9 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
         <meta property="og:url" content={`${siteUrl}`} />
         <meta property="og:site_name" content="Letterflix.com" />
         <meta property="og:type" content="website" />
+        <meta property="og:image:type" content="image/jpeg"></meta>
+        <meta property="og:image:width" content="300">
+        <meta property="og:image:height" content="300"></meta>
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:site" content="Letterflix.com" />
