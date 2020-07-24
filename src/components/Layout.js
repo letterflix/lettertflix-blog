@@ -53,22 +53,22 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
           content={`${withPrefix(siteUrl)}/img/og_image.jpg`}
         />
 
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${siteUrl}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          itemprop="image"
           content={`${withPrefix(siteUrl)}/img/og_image.jpg`}
         />
-        <meta property="og:url" content={`${siteUrl}`} />
-        <meta property="og:site_name" content="Letterflix.com" />
-        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="letterflix" />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content="Letterflix.com" />
+        <meta property="twitter:site" content="Letterflix" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta
