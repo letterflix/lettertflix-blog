@@ -42,7 +42,7 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
         <meta name="description" content={description} />
         <meta
           name="image"
-          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
+          content={`${withPrefix(siteUrl)}/img/og_image.jpg`}
         />
 
         <meta itemprop="name" content={title} />
@@ -50,14 +50,15 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
         <meta name="keywords" content={tags} />
         <meta
           itemprop="image"
-          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
+          content={`${withPrefix(siteUrl)}/img/og_image.jpg`}
         />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
+          itemprop="image"
+          content={`${withPrefix(siteUrl)}/img/og_image.jpg`}
         />
         <meta property="og:url" content={`${siteUrl}`} />
         <meta property="og:site_name" content="Letterflix.com" />
@@ -69,7 +70,7 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
+          content={`${withPrefix(siteUrl)}/img/og_image.jpg`}
         />
 
         <link
