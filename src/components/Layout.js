@@ -1,11 +1,11 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import React from "react";
+import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import "../styles/global.css";
 // import './all.sass'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import useSiteMetadata from "./SiteMetadata";
+import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children, className, isLanding }) => {
   const { title, description, tags, siteUrl } = useSiteMetadata();
@@ -40,7 +40,10 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
         />
         <meta name="theme-color" content="#674B7C" />
         <meta name="description" content={description} />
-        <meta name="image" content={`${withPrefix(siteUrl)}/img/og-image.jpg`} />
+        <meta
+          name="image"
+          content={`${withPrefix(siteUrl)}/img/og-image.jpg`}
+        />
 
         <meta itemprop="name" content={title} />
         <meta itemprop="description" content={description} />
@@ -74,11 +77,16 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
           rel="stylesheet"
         ></link>
 
+        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-173455410-1"
+        ></script>
         <script>
           {`window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'UA-153222612-1');`}
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-173455410-1');`}
         </script>
       </Helmet>
       <Navbar isLanding={isLanding} />
@@ -88,4 +96,4 @@ const TemplateWrapper = ({ children, className, isLanding }) => {
   );
 };
 
-export default TemplateWrapper
+export default TemplateWrapper;

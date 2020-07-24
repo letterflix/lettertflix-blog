@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../img/logo.png";
+import logo from "../img/logo.svg";
 
 const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
     return (
@@ -14,7 +11,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="flex flex-row justify-between items-start max-w-6xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0 mt-2 py-2">
+        <div className="flex flex-row justify-between max-w-6xl mx-auto px-4 sm:px-8 md:px-10 lg:px-0 mt-2 py-2 items-center">
           <div className="flex flex-row items-center">
             <Link to="/" className="navbar-item" title="Logo">
               <img
@@ -35,12 +32,18 @@ const Navbar = class extends React.Component {
             )}
             {/* Hamburger menu */}
           </div>
-          <div className="mr-2 md:mr-0">
+          <div className="">
             <a
-              href="https://app.letterflix.com"
-              className="inline-block text-sm sm:text-base italic font-bold bg-primary text-white px-4 py-1 btn-shadow-yellow md:mt-1"
+              href="https://app.letterflix.com/signup"
+              className="inline-block text-base sm:text-lg text-primary mr-4"
             >
-              Send a Letter
+              SignUp
+            </a>
+            <a
+              href="https://app.letterflix.com/signin"
+              className="inline-block text-base sm:text-lg text-primary"
+            >
+              SignIn
             </a>
           </div>
         </div>

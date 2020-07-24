@@ -47,6 +47,10 @@ body {
   border: 1px dashed rgba(0,0,0,0.24);
 }
 
+.web-share-fade {
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+}
+
 @media (min-width: 640px) {
   .my-masonry-grid_column {
     padding-left: 24px; /* gutter size */
