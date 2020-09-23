@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+  repo: teamxyzstudio/lettertflix-blog
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
