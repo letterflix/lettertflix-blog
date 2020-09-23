@@ -2,12 +2,9 @@
 templateKey: blog-post
 title: Here's why A Letter can be the best thing you can send to your parents
 date: 2020-09-23T13:09:41.642Z
-description: We are living in times when we have unintentionally lost touch with
-  our parents. When we are with them, we don't know how to express our feelings.
-  It's also the same when we are far away from the home. And sending a letter to
-  them can be the perfect way for you to tell them things you never told them in
-  person. Here are 5 reasons why sending a letter to your parents can be the
-  best thing you can do for them.
+description: Sending a letter to your parents, it's an interesting idea. Glad
+  that you want to do it. Sending a letter is not as tedious as it was earlier.
+  With letterflix, you can do it from the comfort of your home :)
 featuredpost: true
 featuredimage: /img/alvaro-serrano-hjwkmkehbco-unsplash.jpg
 tags:
@@ -17,6 +14,8 @@ tags:
   - gift
   - snail-mail
 ---
+We are living in times when we have unintentionally lost touch with our parents. When we are with them, we don't know how to express our feelings. It's also the same when we are far away from the home. And sending a letter to them can be the perfect way for you to tell them things you never told them in person. Here are 5 reasons why sending a letter to your parents can be the best thing you can do for them.
+
 ## Sending a Letter is a thoughtful gesture, it'll make them very happy
 
 Among many things we want, one is that our parents should always be happy. Nothing should bother them and we as their kid we always try to do things that can make them feel happy. So if you a letter for them, you can't imagine how much they will be happy when on receiving a letter from you. This is one of the easiest ways to be very close to them happy while sitting far away from them.
