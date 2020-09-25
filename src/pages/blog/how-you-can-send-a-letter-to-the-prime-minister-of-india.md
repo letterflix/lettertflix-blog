@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: How You Can Send a Letter To The Prime Minister of India
+title: How To Send a Letter To The Prime Minister of India
 date: 2020-09-25T18:52:52.792Z
 description: It is a healthy action as a citizen to write letters to the people
   who run our nation. You may write to draw their attention to a specific issue,
