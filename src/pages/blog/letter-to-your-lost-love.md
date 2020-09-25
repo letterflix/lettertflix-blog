@@ -4,7 +4,7 @@ title: A Letter to Your Lost Love
 date: 2020-07-13T19:08:22.797Z
 description: '"love can only be felt when given", an imaginary letter to your lost love.'
 featuredpost: true
-featuredimage: /img/max-kleinen-7z4aipkokrg-unsplash.jpg
+featuredimage: /img/yuris-alhumaydy-msxmhkgrs8s-unsplash-1-.jpg
 tags:
   - lost love
   - heartbreak
