@@ -11,6 +11,15 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-postcss`,
     "gatsby-plugin-sass",
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://letterflix.com',
+        sitemap: 'https://letterflix.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",

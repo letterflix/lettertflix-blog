@@ -59,7 +59,7 @@ const Footer = class extends React.Component {
             </li>
             <li className="ml-6 mb-4">
               <a href="https://lbb.in/chennai/letterflix-online-letter-posting-delivery-service/" target="_blank" rel="noreferrer">
-                LLB
+                LBB
               </a>
             </li>
 
