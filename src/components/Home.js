@@ -284,7 +284,7 @@ export default function Home() {
             <h2 className="leading-tight text-primary text-3xl md:text-4xl font-pd font-bold font-italic italic">
               Before you leave,
             </h2>
-            <p className="mt-4 md:mt-8 font-bold">Letterto.xyz is a secret</p>
+            <p className="mt-4 md:mt-8 font-bold">Letterflix.com is a secret</p>
             <p>
               Share it with your most trusted friend. Because that’s what we do
               with the secrets.

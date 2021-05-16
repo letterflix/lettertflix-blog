@@ -46,7 +46,7 @@ I feel a higher degree of separation with text messages, video calls are far bet
 
 **Would you ever like to send a letter to someone?** Here's a very short process.
 
-No need to go through the 9-step-process, use [Letterto.xyz](https://letterto.xyz), and just do the **Step 1** (find a person to send a letter to), **Step 2** (write your letter), and **Step 9** (click send).
+No need to go through the 9-step-process, use [Letterflix.com](https://letterflix.com), and just do the **Step 1** (find a person to send a letter to), **Step 2** (write your letter), and **Step 9** (click send).
 
 And in the meantime, manage with texts and occasional disappearing messages.
 
@@ -57,4 +57,4 @@ Yours Truly\
 
 
 
-*Sent via [letterto.xyz](https://letterto.xyz)*
+*Sent via [letterflix.com](https://letterflix.com)*
