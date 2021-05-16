@@ -17,7 +17,7 @@ export default function CTA({className}) {
           </a>
         </div>
 
-        <img className="w-2/3 md:w-auto" src={ctaImg} alt="" />
+        <img className="w-2/3 md:w-auto" src={ctaImg} alt="Receiving letter illustration" />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Navbar = class extends React.Component {
               <img
                 className="w-20 sm:w-24 md:w-32"
                 src={logo}
-                alt="LetterFlix"
+                alt="Letterflix Logo"
               />
             </Link>
             {this.props.isLanding ? (

@@ -46,7 +46,7 @@ export default function Home() {
                 Send a Letter
               </a>
             </div>
-            <img className="hidden lg:block" src={heroImg} alt="Typewriter" />
+            <img className="hidden lg:block" src={heroImg} alt="Typewriter Illustration of girls writing letters" />
           </div>
           <p className="p-12 sm:p-12 md:p-16 lg:p-20"></p>
         </section>
@@ -58,7 +58,7 @@ export default function Home() {
             <div className="flex flex-row -ml-4 sm:-ml-6 md:-ml-8 flex-wrap">
               <div className="w-1/2 sm:w-1/3 pl-4 sm:pl-6 md:pl-8 mb-8 sm:mb-0">
                 <div className="h-20 w-20 rounded-full bg-primary flex justify-center items-center">
-                  <img src={writeIcon} alt="" />
+                  <img src={writeIcon} alt="You write a letter" />
                 </div>
                 <h3 className="text-xl font-bold mt-4">You write</h3>
                 <p>
@@ -68,7 +68,7 @@ export default function Home() {
               </div>
               <div className="w-1/2 sm:w-1/3 pl-4 sm:pl-6 md:pl-8 mb-8 sm:mb-0">
                 <div className="h-20 w-20 rounded-full bg-primary flex justify-center items-center">
-                  <img src={deliveryIcon} alt="" />
+                  <img src={deliveryIcon} alt="We securely print and package letters" />
                 </div>
                 <h3 className="text-xl font-bold mt-4">We do the work</h3>
                 <p>
@@ -78,7 +78,7 @@ export default function Home() {
               </div>
               <div className="w-1/2 sm:w-1/3 pl-4 sm:pl-6 md:pl-8 mb-8 sm:mb-0">
                 <div className="h-20 w-20 rounded-full bg-primary flex justify-center items-center">
-                  <img src={mailboxIcon} alt="" />
+                  <img src={mailboxIcon} alt="We deliver letters at home" />
                 </div>
                 <h3 className="text-xl font-bold mt-4">They receive</h3>
                 <p>
@@ -96,7 +96,7 @@ export default function Home() {
               <img
                 className="w-1/1 lg:w-1/2 relative lg:-mr-8"
                 src={letterSample}
-                alt=""
+                alt="Letterflix Sample Letter with Specs on the side"
               />
               <div className="w-1/1 lg:w-1/2 bg-white p-8 sm:p-10 md:p-12 lg:p-16 relative lg:-ml-8">
                 <h2 className="leading-tight text-primary text-3xl md:text-4xl font-pd font-bold font-italic italic">
@@ -135,7 +135,7 @@ export default function Home() {
                 <div className="-ml-8 flex flex-row flex-wrap">
                   <div className="w-1/2 mb-10 pl-8">
                     <div className="bg-light-yellow rounded-full w-16 h-16 flex justify-center item-center">
-                      <img src={feat1} alt="" />
+                      <img src={feat1} alt="International shipping of letters" />
                     </div>
                     <h3 className="font-bold text-black text-lg mt-4">
                       International Shipping
@@ -145,7 +145,7 @@ export default function Home() {
 
                   <div className="w-1/2 mb-10 pl-8">
                     <div className="bg-light-yellow rounded-full w-16 h-16 flex justify-center item-center">
-                      <img src={feat2} alt="" />
+                      <img src={feat2} alt="Refund for failed deliveries" />
                     </div>
                     <h3 className="text-lg font-bold text-black mt-4">
                       Easy Refund
@@ -157,7 +157,7 @@ export default function Home() {
 
                   <div className="w-1/2 mb-10 pl-8">
                     <div className="bg-light-yellow rounded-full w-16 h-16 flex justify-center item-center">
-                      <img src={feat3} alt="" />
+                      <img src={feat3} alt="Privacy of your letters is ensured" />
                     </div>
 
                     <h3 className="font-bold text-black text-lg mt-4">
@@ -168,7 +168,7 @@ export default function Home() {
 
                   <div className="w-1/2 mb-10 pl-8">
                     <div className="bg-light-yellow rounded-full w-16 h-16 flex justify-center item-center">
-                      <img src={feat4} alt="" />
+                      <img src={feat4} alt="Track your letters" />
                     </div>
                     <h3 className="font-bold text-black text-lg mt-4">
                       Tracking
@@ -238,32 +238,32 @@ export default function Home() {
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta1}
-                alt=""
+                alt="Love letter memes - Letterflix Instagram"
               />
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta2}
-                alt=""
+                alt="Writer memes - Letterflix Instagram"
               />
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta3}
-                alt=""
+                alt="Medieval Art Memes - Letterflix Instagram"
               />
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta4}
-                alt=""
+                alt="Tiny Letter - Letterflix Instagram"
               />
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta5}
-                alt=""
+                alt="Tweet about love letters - Letterflix Instagram"
               />
               <img
                 className="w-1/1 sm:w-1/2 lg:w-1/3 sm:px-4 mb-8"
                 src={insta6}
-                alt=""
+                alt="Funny Medieval Art - Letterflix Instagram"
               />
             </div>
             <div className="text-center">
@@ -302,7 +302,7 @@ export default function Home() {
                 href=""
               >
                 Share the secret
-                <img className="ml-3" src={shareIcon} alt="" />
+                <img className="ml-3" src={shareIcon} alt="Share Letterflix with your friends" />
               </button>
             </RWebShare>
           </div>

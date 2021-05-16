@@ -10,7 +10,7 @@ const Footer = class extends React.Component {
         <div className="max-w-5xl mx-auto flex flex-col-reverse md:flex-row justify-between items-center">
           <div className="mt-8 md:mt-0 text-left md:text-center flex justify-center flex-col items-center">
             <Link to="/" className="text-6xl font-black italic leading-tight inline-block">
-              <img src={logo} alt="" />
+              <img src={logo} alt="Letterflix Logo" />
             </Link>
             <div className="text-lg">
               <a

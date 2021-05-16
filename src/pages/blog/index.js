@@ -24,7 +24,7 @@ export default class BlogIndexPage extends React.Component {
                 </h1>
               </div>
 
-              <img className="w-2/3 sm:w-auto" src={heroImg} alt="" />
+              <img className="w-2/3 sm:w-auto" src={heroImg} alt="Receiving letter illustration" />
             </div>
           </section>
           <section className="section mt-12">
