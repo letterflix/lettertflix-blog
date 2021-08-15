@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { RWebShare } from "react-web-share";
 
 import Layout from "./Layout";
@@ -22,7 +22,53 @@ import insta5 from "../img/insta/insta-5.jpg";
 import insta6 from "../img/insta/insta-6.jpg";
 import shareIcon from "../img/share-icon.svg";
 
+export const getPrice = (currency) => {
+  switch (currency) {
+    case 'INR':
+      return { currency, amount: 99.00, symbol: '₹' }
+    case 'USD':
+      return { currency, amount: 2.99, symbol: '$' }
+    case 'GBP':
+      return { currency, amount: 2.99, symbol: '£' }
+    case 'CHF':
+      return { currency, amount: 2.99, symbol: 'fr.' }
+    case 'EUR':
+      return { currency, amount: 2.99, symbol: '€' }
+    default:
+      return { currency: 'USD', amount: 2.99, symbol: '$' }
+  }
+}
+
+const detectUser = () => {
+
+  var detectedUser = localStorage.getItem('detected-user');
+  if (detectedUser) {
+    return JSON.parse(detectedUser)
+  } else {
+    return fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+  }
+}
+
 export default function Home() {
+
+  let [price, setPrice] = useState();
+
+  useEffect(()=>{
+    // do stuff here...
+    detectUser().then(res => {
+      let price = getPrice(res.currency)
+      setPrice(price)
+    })
+}, [])
+
+
+function getFomattedPrice(price) {
+  if(price.currency == 'EUR')
+    return `${price.amount}${price.symbol}`
+  else 
+    return `${price.symbol}${price.amount}`
+}
 
   return (
     <Layout className="font-lora" hideBLogLink={true} isLanding={true}>
@@ -36,7 +82,7 @@ export default function Home() {
               </h1>
               <p className="text-lg mt-1">
                 Secure, private, and cute online letter posting service. At
-                <span className="font-bold">{` Rs. 99 `}</span>
+                <span className="font-bold">{price && ` ${getFomattedPrice(price)} ` }</span>
                 only.
               </p>
               <a
