@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 5 Ways To Stay In Touch People In a Distant Relationship (#2 Send Letters)
+title: 5 Ways To Stay In Touch With People In a Distant Relationship (#2 Send Letters)
 date: 2021-09-12T15:39:05.033Z
 description: "Interesting ways to keep in touch with your loved ones: Sending
   letters online, sending food and gifts, or scheduling virtual meetups. There's
