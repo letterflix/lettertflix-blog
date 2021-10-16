@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: How to Send Letters? Step by Step Guide
+title: How to Send Letters Online? A Step by Step Guide
 date: 2020-07-14T17:44:42.638Z
-description: How to Send Letters Online
+description: Guide on How to Send Letters Online.
 featuredpost: true
 featuredimage: /img/museums-victoria-HLvV5_BLs_k-unsplash.jpg
 tags:
