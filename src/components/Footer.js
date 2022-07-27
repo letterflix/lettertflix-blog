@@ -68,6 +68,16 @@ const Footer = class extends React.Component {
                 Terms & Privacy Policy
               </a>
             </li>
+            <li className="ml-6 mb-4">
+              <a href="/cancellation-refund-policy.html" target="_blank" rel="noreferrer">
+                Cancellation & Refund Policy
+              </a>
+            </li>
+            <li className="ml-6 mb-4">
+              <a href="/support.html" target="_blank" rel="noreferrer">
+                Support
+              </a>
+            </li>
 
             <li className="ml-6 mb-4">
               <a href="mailto:letterflixteam@gmail.com">
