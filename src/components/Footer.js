@@ -15,10 +15,10 @@ const Footer = class extends React.Component {
             <div className="text-lg">
               <a
                 className="inline-block border-secondary border-b-2 mt-2 italic text-secondary"
-                href="https://byxyz.net"
+                href="https://blinkstore.in"
                 target="_blank" rel="noreferrer"
               >
-                byxyz.net
+                By Blinkstore
               </a>
             </div>
             <a className="mt-1 md:mt-0 inline-block" style={{maxWidth:'184px'}} href="https://www.producthunt.com/posts/letterflix?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-letterflix" target="_blank" rel="noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=288865&theme=light" alt="Letterflix - Send letters online 💌 | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" /></a>
